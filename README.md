@@ -1,6 +1,8 @@
 # CodeAlpha Jenkins Remoting Project
 
 ## 📌 Project Overview
+![Jenkins Master-Agent Architecture](./screenshots/architecture-diagram.png)
+
 Running heavy builds directly on a main Jenkins server (the Controller) poses a major risk in production environments. If a build consumes all the CPU or crashes the machine, the entire CI/CD pipeline goes down for the whole team. 
 
 This project solves that by implementing a **Master-Agent (Controller-Worker) architecture**. In this setup, Jenkins acts purely as a project manager, securely delegating the heavy lifting to remote, disposable Ubuntu worker servers over a private network.
